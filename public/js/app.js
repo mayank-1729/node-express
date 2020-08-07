@@ -14,7 +14,7 @@ searchForm.addEventListener('submit', (e) => {
         msgOne.textContent = 'Please provide the location.'
         return console.log('Please provide the location.')
     }
-    fetch('http://localhost:3000/weather?location=' + locationDoc.value).then((response) => {
+    fetch('/weather?location=' + locationDoc.value).then((response) => {
         console.log(response);
         response.json().then((data) => {
             if (data.error) {
