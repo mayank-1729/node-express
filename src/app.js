@@ -47,12 +47,12 @@ app.get('/weather', (req, res) => {
             return res.send({ 'error': error });
         }
         console.log('Place: ', location);
-        forecast(latitude, longitude, (error, { temperature, feelslike, description } = {}) => {
+        forecast(latitude, longitude, (error, { temperature, feelslike, description, humidity } = {}) => {
             if (error) {
                 return res.send({ 'error': error });
             }
             console.log('Its', description, '. Temperature is', temperature, 'but it feels like', feelslike, '.');
-            return res.send({ 'description': description, 'temperature': temperature, 'feelslike': feelslike })
+            return res.send({ 'description': description, 'temperature': temperature, 'feelslike': feelslike, 'humidity': humidity })
         })
     })
 

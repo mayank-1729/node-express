@@ -22,7 +22,8 @@ searchForm.addEventListener('submit', (e) => {
                 console.error(data)
             } else {
                 msgOne.textContent = ''
-                msgTwo.textContent = 'Its ' + data.description + '. Temperature is ' + data.temperature + ' but it feels like ' + data.feelslike + '.'
+                msgTwo.textContent = 'Its ' + data.description + '. Temperature is ' + data.temperature + ' but it feels like ' + data.feelslike + '.' + '\n Humidity ' + data.humidity
+
             }
         })
     })
